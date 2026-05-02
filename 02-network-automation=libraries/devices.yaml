@@ -1,0 +1,9 @@
+devices:
+  - name: R1
+    ip: 10.1.1.1
+    username: admin
+    password: admin123
+  - name: R2
+    ip: 10.1.1.2
+    username: admin
+    password: admin123
