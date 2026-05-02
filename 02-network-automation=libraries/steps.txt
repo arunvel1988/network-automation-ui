@@ -1,10 +1,10 @@
 ################################################
-hostname R1   ! (change to R2 on second router)
+hostname R1  
 
 username admin privilege 15 secret admin123
 
 interface g0/0
- ip address 10.1.1.1 255.255.255.0   ! change on R2
+ ip address 10.1.1.1 255.255.255.0   
  no shutdown
 
 ip domain-name lab.local
@@ -15,6 +15,8 @@ line vty 0 4
  transport input ssh
 
 ip ssh version 2
+
+netconf-yang
 ################################################
 
 hostname R2   ! (change to R2 on second router)
@@ -22,7 +24,7 @@ hostname R2   ! (change to R2 on second router)
 username admin privilege 15 secret admin123
 
 interface g0/0
- ip address 10.1.1.2 255.255.255.0   ! change on R2
+ ip address 10.1.1.2 255.255.255.0 
  no shutdown
 
 ip domain-name lab.local
@@ -33,5 +35,5 @@ line vty 0 4
  transport input ssh
 
 ip ssh version 2
-
+netconf-yang
 ################################################
